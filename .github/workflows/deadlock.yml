@@ -1,0 +1,12 @@
+name: Deadlock Testing
+on:
+  workflow_dispatch:
+
+concurrency: foo
+
+jobs:
+  child:
+    runs-on: ubuntu-latest 
+    concurrency: foo
+    steps:
+      - uses: actions/checkout@v3
