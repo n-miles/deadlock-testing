@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
   child2:
+    needs: ["child1"]
     runs-on: ubuntu-latest 
     concurrency: foo
     steps:
