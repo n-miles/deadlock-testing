@@ -5,7 +5,12 @@ on:
 concurrency: foo
 
 jobs:
-  child:
+  child1:
+    runs-on: ubuntu-latest 
+    concurrency: bar
+    steps:
+      - uses: actions/checkout@v3
+  child2:
     runs-on: ubuntu-latest 
     concurrency: foo
     steps:
